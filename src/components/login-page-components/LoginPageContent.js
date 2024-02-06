@@ -6,7 +6,7 @@ const LoginPageContent = () => {
     return (
         <div className="col-lg-6">
             <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-                Responsive left-aligned hero with image
+                Dev Directory
             </h1>
             <p className="lead">
                 Quickly design and customize responsive mobile-first sites with Bootstrap, 

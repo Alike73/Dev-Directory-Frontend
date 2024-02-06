@@ -1,6 +1,6 @@
 
 
-/* ---Login-Btn--- */
+/* ===Login-Btn=== */
 .login_link {
     font-family: 'Urbanist', sans-serif;
     font-size: 2rem;
@@ -10,16 +10,16 @@
     outline: none;
     border: none;
     position: relative;
-    transition: var(--transition);
+    transition: var(--transition-1);
 }
 .login_link span, 
 .login_link .bi-arrow-right {
     position: relative;
     display: inline-block;
-    transition: var(--transition);
+    transition: var(--transition-1);
 }
 .login_link span::first-letter {
-    color: var(--c-coral);
+    color: var(--c-orange);
 }
 .login_link:hover span::first-letter {
     color: var(--c-label-sm);
@@ -28,7 +28,7 @@
     color: var(--c-light);
 }
 .bi-arrow-right {
-    transition: var(--transition);
+    transition: var(--transition-1);
 }
 .login_link .pink {
     width: 2em;
@@ -50,6 +50,27 @@
     color: var(--c-light);
 }
 .login_link:hover .bi-arrow-right {
-    color: var(--c-coral);
+    color: var(--c-orange);
 }
-/* --------------- */
+/* ---Bg-Video--- */
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* ---Overlay--- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: linear-gradient(to bottom, rgba(34,35,46,0.75) 50%, rgba(34,35,46));
+    background: rgba(24, 33, 50, 0.5);
+}
+/* ====== */
