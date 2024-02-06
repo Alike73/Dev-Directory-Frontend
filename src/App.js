@@ -1,4 +1,5 @@
 import './App.css';
+import Main from './pages/main/Main';
 
 
 
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>HELLO WORLD!</h1>
+      <Main />
     </div>
   );
 }
