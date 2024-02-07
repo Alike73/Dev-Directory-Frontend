@@ -45,7 +45,6 @@
   font-weight: 400;
   line-height: 1.5;
   background: rgba(0, 0, 0, 0.7);
-  /* box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; */
   border: 1px solid #393;
   border-radius: var(--l-sm3);
   box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;

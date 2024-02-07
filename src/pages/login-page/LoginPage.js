@@ -14,12 +14,10 @@ const LoginPage = () => {
     useEffect(() => {
         // Set showOverlay to true immediately
         setShowOverlay(true);
-
         // Set a timeout to set showOverlay back to false after 0.5 seconds
         const timeoutId = setTimeout(() => {
             setShowOverlay(false);
         }, 200); // 0.2 seconds = 200 milliseconds
-
         // Clean up the timeout when component unmounts or when the effect re-runs
         return () => clearTimeout(timeoutId);
     }, []);
