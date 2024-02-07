@@ -3,7 +3,10 @@
 
 /* ---Components-Style--- */
 @import "./layouts/ui-styles.css";
-/* ---------------------- */
+
+/* ---Key-Frames--- */
+@import "./keyframes/keyframes.css";
+
 
 /* font-family: 'Manrope', sans-serif;
 font-family: 'Space Grotesk', sans-serif;
@@ -39,6 +42,7 @@ body {
   --c-blue-md: hsl(248, 45%, 54%);
   --c-blue-sm: hsl(242, 51%, 70%);
   --c-dark: hsl(0, 0%, 5%);
+  --c-dark-md: hsl(243, 17%, 22%);
   --c-orange: hsl(22, 89%, 55%);
   --c-lyme: hsl(118, 56%, 66%);
   --c-salad: hsl(186, 79%, 42%);
@@ -47,6 +51,28 @@ body {
   --c-label-md: hsl(216, 2%, 47%);
   --c-label-sm: hsl(211, 25%, 71%);
   --c-light: hsl(0, 0%, 100%);
+
+  --l-sm1: .25rem;
+  --l-sm2: .375rem;
+  --l-sm3: .5rem;
+  --l-sm4: .75rem;
+  --l-md1: 1rem;
+  --l-md2: 1.25rem;
+  --l-md3: 1.5rem;
+  --l-lg1: 2rem;
+  --l-lg2: 3rem;
+  --l-lg3: 4rem;
+
+  --img-shadow-1: drop-shadow(1px 2px 3px #000000);
+  --img-shadow-2: drop-shadow(1px 1px 2px #D7E2FE);
+  --img-shadow-3: drop-shadow(1px 2px 3px rgb(115, 241, 11));
+  --img-shadow-4: drop-shadow(1px 2px 1px #8d8282);
+  --img-shadow-5: drop-shadow(1px 2px 3px #FFFFFF);
+
+  --text-shadow: 0px 4px 3px 
+    rgb(0 0 0 / 40%), 0px 8px 13px 
+    rgb(0 0 0 / 10%), 0px 18px 23px 
+    rgb(0 0 0 / 10%);
 
   --transition-1: 250ms ease-in-out;
   --transition-2: 500ms ease-in-out;
