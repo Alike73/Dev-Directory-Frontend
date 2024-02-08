@@ -11,6 +11,7 @@ import ReactQnA from "../react-page/ReactQnA";
 import NodeJsQnA from "../nodejs-page/NodeJsQnA";
 import MongodbQnA from "../mongodb-page/MongodbQnA";
 import GitHubQnA from "../github-page/GitHubQnA";
+import ScrollBtn from "../../components/scrollbtn-component/ScrollBtn";
 
 // import dividerTop from '../../assets/images/divider-round-top.svg';
 
@@ -21,7 +22,7 @@ const Main = () => {
         <div className="main">
             {/* <LoginPage /> */}
             <SidebarToggler />
-            
+            <ScrollBtn />
 
             <BrowserRouter>
                     <BubblyContainer />

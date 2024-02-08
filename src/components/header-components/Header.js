@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import GoHome from "../go-home/GoHome";
 import { getActiveHeader, setIsActiveHeader } from "../../redux/NavbarSlice";
 import { useEffect } from "react";
+import ScrollProgress from "../scrollprogress/ScrollProgress";
 
 
 const Header = () => {
@@ -21,6 +22,7 @@ const Header = () => {
 
     return (
         <header className={ `py-3 mb-3 header ${ isActiveHeader ? "active" : "" }` }>
+        <ScrollProgress />
             <div className="container-fluid">
                 <GoHome />
             </div>

@@ -4,6 +4,9 @@
 /* ---Components-Style--- */
 @import "./layouts/ui-styles.css";
 
+/* ---Book-Card--- */
+@import './layouts/ui-book-card.css';
+
 /* ---Key-Frames--- */
 @import "./keyframes/keyframes.css";
 
@@ -43,6 +46,7 @@ body {
   --c-blue-sm: hsl(242, 51%, 70%);
   --c-dark: hsl(0, 0%, 5%);
   --c-dark-md: hsl(243, 17%, 22%);
+  --c-transparent-dark: hsla(0, 0%, 0%, 0.667);
   --c-orange: hsl(22, 89%, 55%);
   --c-lyme: hsl(118, 56%, 66%);
   --c-salad: hsl(186, 79%, 42%);

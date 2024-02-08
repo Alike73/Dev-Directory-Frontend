@@ -87,6 +87,45 @@ video {
     z-index: 2;
 }
 
+/* ===Scroll-Btn=== */
+
+.top-to-btm{
+    position: relative;
+}
+.icon-position{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 200;
+}
+.icon-position2{
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    z-index: 200;
+}
+.icon-style{
+    background-color: var(--c-transparent-dark);
+    /* #3E54AC */
+    border: 2px solid var(--c-label);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    color: var(--c-lyme);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: movebtn 3s ease-in-out infinite;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: all .5s ease-in-out;
+}
+.icon-style:hover{
+    animation: none;
+    color: var(--c-orange);
+    border: 2px solid var(--c-orange);
+}
+
 /* ===Header=== */
 .header {
     width: 100%;
@@ -363,3 +402,5 @@ video {
 .dropdown_menu_lang {
     --bs-dropdown-min-width: 4rem;
 }
+
+/* ====== */
