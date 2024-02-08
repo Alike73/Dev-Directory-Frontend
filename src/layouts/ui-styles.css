@@ -359,3 +359,7 @@ video {
 .dropdown-item:hover {
     color: var(--c-orange);
 }
+/* ===Sidebar-Language-Toggle=== */
+.dropdown_menu_lang {
+    --bs-dropdown-min-width: 4rem;
+}
