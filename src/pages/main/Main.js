@@ -1,11 +1,55 @@
-import LoginPage from "../login-page/LoginPage";
+// import LoginPage from "../login-page/LoginPage";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { BubblyContainer } from "react-bubbly-transitions";
+import Header from "../../components/header-components/Header";
+import Sidebar from "../../components/sidebar-components/Sidebar";
+import SidebarToggler from "../../components/sidebar-toggler/SidebarToggler";
+import HomePage from "../home-page/HomePage";
+import HtmlCssQnA from "../html-css-page/HtmlCssQnA";
+import JavaScriptQnA from "../js-page/JavaScriptQnA";
+import ReactQnA from "../react-page/ReactQnA";
+import NodeJsQnA from "../nodejs-page/NodeJsQnA";
+import MongodbQnA from "../mongodb-page/MongodbQnA";
+import GitHubQnA from "../github-page/GitHubQnA";
+
+// import dividerTop from '../../assets/images/divider-round-top.svg';
 
 
 const Main = () => {
 
     return (
         <div className="main">
-            <LoginPage />
+            {/* <LoginPage /> */}
+            <SidebarToggler />
+            
+
+            <BrowserRouter>
+                    <BubblyContainer />
+                    <Routes>
+                    
+                        <Route
+                        path="/"
+                        element={
+                            <>
+                            <Header />
+                            <Sidebar />
+                            <Outlet />
+                            </>
+                        }
+                        >
+                            <Route index element={<HomePage />} />
+                            <Route path="html_css" element={<HtmlCssQnA />} />
+                            <Route path="javascript" element={<JavaScriptQnA />} />
+                            <Route path="react" element={<ReactQnA />} />
+                            <Route path="nodejs" element={<NodeJsQnA />} />
+                            <Route path="mongodb" element={<MongodbQnA />} />
+                            <Route path="github" element={<GitHubQnA />} />
+                            <Route path="*" element={<>No Match</>} />
+                        </Route>
+                    </Routes>
+                    {/* <img className='divider_rounded_top' src={ dividerTop } alt="divider-rounded-top" /> */}
+                    {/* <Footer /> */}
+                </BrowserRouter>
         </div>
     )
 };

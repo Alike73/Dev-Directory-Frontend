@@ -1,4 +1,3 @@
-
 /* ===Login-Btn=== */
 .login_link {
     font-family: 'Urbanist', sans-serif;
@@ -87,4 +86,276 @@ video {
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
-/* ====== */
+
+/* ===Header=== */
+.header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transition: var(--transition-1);
+    z-index: 200;
+}
+.header.active {
+    background: var(--c-navy);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/* ===Go-Home-Btn=== */
+.go_home {
+    width: fit-content;
+}
+.go_home .react-bubbly-transitions__bubbly-link .go_home_icon {
+    font-size: clamp(var(--l-lg1), calc(var(--size) * 1.2), var(--l-lg2));
+    color: var(--c-label-sm);
+    filter: var(--img-shadow-1);
+    transition: var(--transition-1);
+}
+.go_home:hover {
+    cursor: pointer;
+}
+.go_home:hover .react-bubbly-transitions__bubbly-link .go_home_icon {
+    color: var(--c-orange);
+}
+
+/* ===Sidebar=== */
+.sidebar {
+    width: 280px;
+    height: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    translate: 280px 0;
+    overflow-y: auto;
+    background: var(--c-dark-md);
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+        10px 10px 70px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    transition: var(--transition-1);
+    z-index: 210;
+}
+.sidebar.open {
+    translate: 0;
+}
+
+/* ===Sidebar-Toggler=== */
+.sidebar_toggler_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 220;
+}
+.sidebar_toggler_wrapper p {
+    color: var(--c-label);
+}
+.sidebar_toggler_wrapper.open {
+    background: var(--c-dark-md);
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+        10px 10px 70px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+
+    border-bottom-left-radius: var(--l-md2);
+    padding-left: var(--l-md2);
+}
+.sidebar_toggler_wrapper:hover {
+    cursor: pointer;
+}
+.sidebar_toggler {
+    border: none;
+}
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--transition-2);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray var(--transition-2), stroke-dashoffset var(--transition-2);
+    stroke:var(--c-orange);
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+.ham1 .top {
+    stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+    stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+    stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+    stroke-dashoffset: -138px;
+}
+
+/* ===Sidebar-Links=== */
+.sidebar_logo {
+    color: var(--c-orange);
+    filter: var(--img-shadow-1);
+}
+.react-bubbly-transitions__bubbly-link {
+    width: 100%;
+    text-shadow: var(--text-shadow);
+}
+
+.list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--c-blue-md);
+    border-radius: 22.5px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-1);
+}
+
+.list-item:hover::before {
+    width: 100%;
+}
+
+.list-item .rank {
+    position: relative;
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.list-item .rank::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: var(--c-dark);
+    border-radius: 35px;
+    transform: scale(0);
+    transition: var(--transition-1);
+}
+
+.list-item:hover .rank::before {
+    transform: scale(1);
+}
+
+.list-item .rank span {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--c-label-sm);
+    transition: var(--transition-1);
+}
+.list-item:hover .rank span {
+    color: var(--c-light);
+}
+
+.list-item .name {
+    position: relative;
+    line-height: 1.15rem;
+}
+
+.list-item .name h4 {
+    font-weight: 700;
+    color: var(--c-label);
+    transition: var(--transition-1);
+    margin: 0;
+}
+.list-item:hover .name h4 {
+    color: var(--c-orange);
+}
+.react-bubbly-transitions__bubbly-link.active .list-item::before {
+    width: 100%;
+}
+.react-bubbly-transitions__bubbly-link.active .rank::before {
+    transform: scale(1);
+    border: 2px solid var(--c-orange);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.react-bubbly-transitions__bubbly-link.active .name h4 {
+    color: var(--c-light);
+}
+.react-bubbly-transitions__bubbly-link.active .list-item .rank span {
+    color: var(--c-light);
+}
+
+/* ===Sidebar-Links-Animation=== */
+.nav li {
+    translate: 110% 0;
+    transition: var(--transition-1);
+}
+.nav :first-child.open {
+    transition-delay: 250ms;
+    translate: 0;
+}
+.nav :nth-child(2).open {
+    transition-delay: 300ms;
+    translate: 0;
+}
+.nav :nth-child(3).open {
+    transition-delay: 350ms;
+    translate: 0;
+}
+.nav :nth-child(4).open {
+    transition-delay: 400ms;
+    translate: 0;
+}
+.nav :nth-child(5).open {
+    transition-delay: 450ms;
+    translate: 0;
+}
+.nav :nth-child(6).open {
+    transition-delay: 500ms;
+    translate: 0;
+}
+.nav :last-child.open {
+    transition-delay: 550ms;
+    translate: 0;
+}
+
+/* ===Sidebar-Dropdown-Menu=== */
+.dropdown-menu {
+    background: var(--c-dark-md);
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+        10px 10px 70px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+.dropdown-menu .dropdown-item {
+    background: transparent;
+    color: var(--c-label);
+    transition: var(--transition-1);
+}
+.dropdown-item:hover {
+    color: var(--c-orange);
+}
