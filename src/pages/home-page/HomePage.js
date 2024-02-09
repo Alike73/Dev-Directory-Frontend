@@ -1,6 +1,6 @@
-import BannerContent from "../../components/home-page-components/BannerContent";
+import BannerContent from "../../components/home/BannerContent";
 import dividerImg from "../../assets/images/divider-round-bottom.svg";
-import BookShelf from "../../components/home-page-components/BookShelf";
+import BookShelf from "../../components/home/BookShelf";
 
 
 

@@ -403,4 +403,95 @@ video {
     --bs-dropdown-min-width: 4rem;
 }
 
-/* ====== */
+/* ===Book-Search-Input=== */
+.input-wrapper {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+}
+.input {
+    border-style: none;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    outline: none;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+    background-color: var(--c-blue);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    padding-right: 40px;
+    color: var(--c-light);
+}
+.input::placeholder,
+.input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+}
+
+.input::placeholder {
+    color: var(--c-label);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border-style: none;
+    border-radius: 50%;
+    pointer-events: painted;
+    background-color: transparent;
+    transition: .2s linear;
+}
+
+.icon:focus ~ .input,
+.input:focus {
+    box-shadow: none;
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 3px solid var(--c-blue);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+/* ===Book-Filter-Btn=== */
+@keyframes glow-btn {
+    0% {
+    border-color: #393;
+    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+    }	
+    100% {
+    border-color: #6f6;
+    box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #000;
+    }
+}
+.book_category_btn {
+    border: 1px solid var(--c-lyme);
+    text-shadow: var(--text-shadow);
+    background: var(--c-dark-md);
+    color: var(--c-label);
+    font-size: clamp(var(--l-sm4), calc(var(--size) * 1.2), var(--l-md1));
+    font-weight: 400;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-1);
+}
+.book_category_btn:hover {
+    color: var(--c-light);
+    background-image: var(--filter-btn-bg);
+    border: 1px solid #393;
+    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+    animation: glow-btn 800ms ease-out infinite alternate;
+    scale: 1.075;
+}
