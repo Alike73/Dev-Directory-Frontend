@@ -14,11 +14,11 @@ const SidebarLinkItem = ({ routeTo, icon, title }) => {
 
     return (
         <li 
-            className={ `nav-item my-3 ${ isOpen ? "open" : "" }` } 
+            className={ `nav-item my_nav_item my-3 ${ isOpen ? "open" : "" }` } 
             onClick = { handleToggleSidebar }
         >
             <BubblyLink to={ routeTo }>
-                <div className="list-item">
+                <div className="list-item my_nav_list_item">
                     <div className="rank">
                         <span>
                             { icon }

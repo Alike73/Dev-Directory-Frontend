@@ -128,10 +128,18 @@
   filter: var(--img-shadow-1);
 }
 
-.divider_bottom {
+.divider_bottom,
+.divider_rounded_top {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+/* ===Footer=== */
+.footer_wrapper {
+  width: 100%;
+  height: fit-content;
+  background: var(--c-grey);
 }
 
 
@@ -149,7 +157,8 @@
     left: 0; 
     transform: rotate(15deg);
   }
-  .divider_bottom {
+  .divider_bottom,
+  .divider_rounded_top {
     max-height: 70px;
   }
 }

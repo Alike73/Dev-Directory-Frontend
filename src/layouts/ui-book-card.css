@@ -69,6 +69,9 @@
 
 .card:hover .details {
     bottom: 0;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
@@ -79,53 +82,27 @@
                 rgba(50, 241, 222, 0.05) 25px 25px;
 }
 
-.details h1,
 .details h2 {
     font-weight: 700;
-}
-
-.details h1 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.details h2 {
-    font-weight: 400;
-    font-size: 1em;
-    margin-bottom: 10px;
-    opacity: .6;
-}
-
-.details .rating {
-    position: relative;
-    margin-bottom: 15px;
-    display: flex;
-    gap: .25em;
-}
-
-.details .rating i {
-    color: #e3c414;
-}
-
-.details .rating span {
-    margin-left: 0.25em;
+    font-size: 1.7em;
 }
 
 .details .tags {
     display: flex;
-    gap: .375em;
+    justify-content: flex-end;
     margin-bottom: .875em;
-    font-size: .85em;
 }
-
-.details .tags span {
-    padding: .35rem .65rem;
+.details .tags .btn-outline-info,
+.edit_delete_wrapper button {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-1);
+}
+.details .tags .btn-outline-info:hover {
     color: var(--c-light);
-    border: 1.5px solid rgba(255 255 255 / 0.4);
-    border-radius: 4px;
-    border-radius: 50px;
+    text-shadow: var(--text-shadow);
 }
-
 .details .desc {
     color: var(--c-light);
     opacity: .8;
@@ -133,28 +110,81 @@
     margin-bottom: 1em;
 }
 
-.details .cast h3 {
-    margin-bottom: .5em;
-}
-
-.details .cast ul {
+/* ===Book-Edit-Delete-Btn-Group=== */
+.details .cast .edit_delete_wrapper {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.625rem;
     width: 100%;
+    height: 5rem;
+    padding-top: var(--l-lg1);
+}
+.edit_btn:hover {
+    color: var(--c-lyme);
+    transform: translateY(-2px);
+}
+.delete_btn:hover {
+    color: var(--c-orange);
+    transform: translateY(-2px);
+}
+.btn_ico {
+    filter: var(--img-shadow-1);
 }
 
-.details .cast ul li {
-    list-style: none;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1.5px solid var(--c-light);
+/* ===Secure-Input=== */
+.bi-pen {
+    margin-bottom: -5px;
+    color: var(--c-label);
+}
+.bi-pen:hover,
+.bi-eye:hover,
+.bi-eye-slash:hover {
+    cursor: pointer;
+}
+.activeInput {
+    width: 0%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--c-label);
+    display: block;
+    color: var(--c-orange);
+    transition: var(--transition-2);
+}
+.activeInput::placeholder {
+    color: var(--c-label);
+}
+.activeInput:focus {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--c-label);
+    color: var(--c-orange);
+    box-shadow: none;
+}
+.activeInput:focus::placeholder {
+    transform: translateY(-12px) translateX(30px);
+    color: transparent;
+    transition: all .4s ease-in-out;
 }
 
-.details .cast ul li img {
+/* ===Book-QR-Code=== */
+.book_qr_code_wrapper {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    max-width: 4.6rem;
     width: 100%;
-    height: 100%;
+    height: auto;
+    background: var(--c-label);
+    padding: .4rem;
+    border-radius: var(--l-sm1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, 
+                rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.qr_code {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }

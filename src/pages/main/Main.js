@@ -12,8 +12,8 @@ import NodeJsQnA from "../nodejs-page/NodeJsQnA";
 import MongodbQnA from "../mongodb-page/MongodbQnA";
 import GitHubQnA from "../github-page/GitHubQnA";
 import ScrollBtn from "../../components/scrollbtn/ScrollBtn";
-
-// import dividerTop from '../../assets/images/divider-round-top.svg';
+import dividerTop from '../../assets/images/divider-round-top.svg';
+import Footer from "../../components/footer/Footer";
 
 
 const Main = () => {
@@ -48,8 +48,8 @@ const Main = () => {
                             <Route path="*" element={<>No Match</>} />
                         </Route>
                     </Routes>
-                    {/* <img className='divider_rounded_top' src={ dividerTop } alt="divider-rounded-top" /> */}
-                    {/* <Footer /> */}
+                    <img className='divider_rounded_top' src={ dividerTop } alt="divider-rounded-top" />
+                    <Footer />
                 </BrowserRouter>
         </div>
     )

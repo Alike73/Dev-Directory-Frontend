@@ -6,7 +6,7 @@ import BookCard from "./BookCard";
 const BookShelf = () => {
 
     return (
-        <div className="container pt-5">
+        <div className="container pt-3">
             <div className="d-flex justify-content-center">
                 <BookSearchInput />
             </div>

@@ -23,7 +23,7 @@ const Sidebar = () => {
                 {/* <GiBurningBook className="fs-1 sidebar_logo" /> */}
             </div>
             <hr />
-            <ul className="nav nav-pills flex-column mb-auto">
+            <ul className="nav nav-pills flex-column mb-auto my_nav">
                 { sidebarLinks.map((item) => <SidebarLinkItem 
                     key = { item.id }
                     routeTo = { item.routeTo }
