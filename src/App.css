@@ -135,13 +135,6 @@
   height: 100%;
 }
 
-/* ===Footer=== */
-.footer_wrapper {
-  width: 100%;
-  height: fit-content;
-  background: var(--c-grey);
-}
-
 
 /* ---MediaQuery--- */
 @media (width <= 1024px) {
@@ -160,6 +153,13 @@
   .divider_bottom,
   .divider_rounded_top {
     max-height: 70px;
+  }
+  .list_item a {
+    width: 2rem;
+    height: 2rem;
+  }
+  .soc_icon {
+      font-size: 1rem;
   }
 }
 @media all and (max-width: 400px) {

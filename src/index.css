@@ -51,6 +51,7 @@ body {
   --c-dark-md: hsl(243, 17%, 22%);
   --c-transparent-dark: hsla(0, 0%, 0%, 0.667);
   --c-orange: hsl(22, 89%, 55%);
+  --c-coral: hsl(2, 100%, 66%);
   --c-lyme: hsl(118, 56%, 66%);
   --c-salad: hsl(186, 79%, 42%);
   --c-label: hsl(213, 9%, 58%);

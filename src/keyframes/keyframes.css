@@ -205,3 +205,64 @@
                 transform: translateY(0px);
         }
 }
+
+/* ===Book-Filter-Glow=== */
+@keyframes glow-btn {
+        0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+        }	
+        100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #000;
+        }
+}
+
+/* ===Footer-Form-Input-Glow=== */
+@keyframes glow-input {
+        0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+        }	
+        100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #000;
+        }
+}
+
+@keyframes glow-invalid-input {
+        0% {
+        border-color: rgb(239, 25, 10);
+        box-shadow: 0 0 5px rgba(255, 8, 0, 0.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+        }	
+        100% {
+        border-color: rgb(207, 103, 95);
+        box-shadow: 0 0 20px rgba(222, 114, 114, 0.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #000;
+        }
+}
+
+/* ===Footer-Form-Envelope=== */
+@-webkit-keyframes slide-out-bck-top {
+        0% {
+        -webkit-transform: translateZ(1) translateY(0);
+        transform: translateZ(1) translateY(0);
+        opacity: 1;
+        }
+        100% {
+        -webkit-transform: translateZ(-1100px) translateY(-1000px);
+        transform: translateZ(-1100px) translateY(-1000px);
+        opacity: 0;
+        }
+}
+@keyframes slide-out-bck-top {
+        0% {
+        -webkit-transform: translateZ(1) translateY(0);
+        transform: translateZ(1) translateY(0);
+        opacity: 1;
+        }
+        100% {
+        -webkit-transform: translateZ(-1100px) translateY(-1000px);
+        transform: translateZ(-1100px) translateY(-1000px);
+        opacity: 0;
+        }
+}
