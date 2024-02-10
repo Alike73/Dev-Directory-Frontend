@@ -542,7 +542,7 @@ video {
 
 .footer_nav .react-bubbly-transitions__bubbly-link {
     width: fit-content;
-    padding: var(--l-sm1) var(--l-sm3);
+    padding: var(--l-sm1) var(--l-md1);
     font-family: 'Space Grotesk', sans-serif;
     text-align: left;
     color: var(--c-label);
@@ -562,9 +562,10 @@ video {
 
 .footer_nav .react-bubbly-transitions__bubbly-link.active::before,
 .footer_nav .react-bubbly-transitions__bubbly-link:hover::before {
-    display: inline-block;
-    margin-right: 0.355em;
-    vertical-align: 0.1em;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
     content: "";
     border-top: 0.3em solid transparent;
     border-right: 0;
