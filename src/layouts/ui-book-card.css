@@ -1,5 +1,47 @@
+.reader-header {
+    background: #323639;
+    border: none;
+}
+.close_viewer_btn,
+.viewer_logo {
+    color: var(--c-label-lg);
+    filter: var(--img-shadow-1);
+    transition: var(--transition-1);
+}
+.viewer_logo:hover {
+    color: var(--c-coral);
+}
+.close_viewer_btn:hover {
+    color: var(--c-coral);
+    transform: rotate(90deg);
+    scale: 1.1;
+}
+.modal-fullscreen .modal-body {
+    position: relative;
+    overflow-y: hidden;
+    background-color: var(--bg);
+}
 
+/* ===Iframe=== */
+.iframe_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: var(--transition-2);
+}
 
+.iframe_wrapper.active {
+    opacity: 1;
+}
+.my_viewer_iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===Book-Card=== */
 .card {
     position: relative;
     width: 325px;
@@ -87,30 +129,36 @@
     font-size: 1.7em;
 }
 
+/* ===Read-Book-Btn=== */
 .details .tags {
     display: flex;
     justify-content: flex-end;
     margin-bottom: .875em;
 }
-.details .tags .btn-outline-info,
-.edit_delete_wrapper button {
+.details .tags .read_btn {
+    color: var(--c-lyme);
+    text-shadow: var(--text-shadow);
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
                 inset 2px 2px 5px rgba(255, 255, 255, 0.5),
                 inset -3px -3px 5px rgba(0, 0, 0, 0.5);
     transition: var(--transition-1);
 }
-.details .tags .btn-outline-info:hover {
+.details .tags .read_btn span {
+    font-size: clamp(var(--l-sm4), calc(var(--size) * 1.2), var(--l-md1));
+    color: var(--c-orange);
+}
+.details .tags .read_btn:hover {
     color: var(--c-light);
-    text-shadow: var(--text-shadow);
+    border: 1px solid #393;
+    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+    transform: translateY(-2px);
+    animation: glow-btn 800ms ease-out infinite alternate;
 }
-.dropdown_menu_book_card {
-    --bs-dropdown-min-width: 7.5rem;
+.details .tags .read_btn:hover span {
+    color: var(--c-light);
 }
-.dropdown_menu_book_card a {
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
-                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
-                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
-}
+
+/* ===Book-Card-Text=== */
 .details .desc {
     color: var(--c-light);
     opacity: .8;
@@ -124,6 +172,12 @@
     width: 100%;
     height: 5rem;
     padding-top: var(--l-lg1);
+}
+.edit_delete_wrapper button {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-1);
 }
 .edit_btn:hover {
     color: var(--c-lyme);
