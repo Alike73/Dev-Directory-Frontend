@@ -1,8 +1,8 @@
-import React from 'react';
 import { TfiPencilAlt } from "react-icons/tfi";
 import { BsTrash3 } from "react-icons/bs";
 import SecureInput from '../secure-input/SecureInput';
 import BookQRCode from '../book-qr-code/BookQRCode';
+import ReadBookBtnGroup from "./ReadBookBtnGroup";
 
 
 
@@ -19,12 +19,11 @@ const BookCardDetails = () => {
                 Marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for meaning.
             </p>
             <div className="tags">
-                <button className="btn btn-outline-info rounded-pill px-3" type="button">
-                    Read more
-                </button>
+                <ReadBookBtnGroup />
             </div>
             <div className="cast">
                 <SecureInput />
+                <small className="mb-0 text-warning">Scan it to download on your mobile</small>
                 <div className="edit_delete_wrapper">
                     <BookQRCode />
                     <div className="d-flex justify-content-end">

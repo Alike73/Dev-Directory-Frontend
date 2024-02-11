@@ -62,7 +62,7 @@
     padding: 1.5em 1.5em 2em;
     background: var(--c-transparent-dark);
     backdrop-filter: blur(16px) saturate(120%);
-    transition: .3s;
+    transition: var(--transition-1);
     color: var(--c-light);
     z-index: 2;
 }
@@ -102,6 +102,14 @@
 .details .tags .btn-outline-info:hover {
     color: var(--c-light);
     text-shadow: var(--text-shadow);
+}
+.dropdown_menu_book_card {
+    --bs-dropdown-min-width: 7.5rem;
+}
+.dropdown_menu_book_card a {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 .details .desc {
     color: var(--c-light);

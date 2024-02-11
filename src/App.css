@@ -135,6 +135,12 @@
   height: 100%;
 }
 
+/* ===Modal-Reader=== */
+.PSPDFKit-8jp8nm1hj7szh4vv5aurdvd5j9 {
+  background: #6f7c89;
+}
+/* ================== */
+
 
 /* ---MediaQuery--- */
 @media (width <= 1024px) {
