@@ -7,6 +7,9 @@
 /* ---Book-Card--- */
 @import './layouts/ui-book-card.css';
 
+/* ---Accordion--- */
+@import './layouts/ui-accordion.css';
+
 /* ---Key-Frames--- */
 @import "./keyframes/keyframes.css";
 
@@ -87,6 +90,7 @@ body {
   --transition-3: 750ms ease-in-out;
 
   --bg-home-hero: url('./assets/images/Animated\ Shape.svg');
+  --accordion-arrow: url('./assets/images/accord-arrow.svg');
   --filter-btn-bg: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
 

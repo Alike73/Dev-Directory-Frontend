@@ -8,9 +8,9 @@ import BookModalReader from "../../components/home/BookModalReader";
 const HomePage = () => {
 
     return (
-        <div className="home page">
+        <div className="page">
             <BookModalReader />
-            <div className="home_hero_wrapper">
+            <div className="hero_wrapper">
                 <BannerContent />
                 <img className="divider_bottom" src={ dividerImg } alt="divider-round-bottom" />
             </div>

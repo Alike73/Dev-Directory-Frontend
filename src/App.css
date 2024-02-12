@@ -16,7 +16,7 @@
 }
 
 .login h1,
-.home .content h2 {
+.page .content h2 {
   width: 100%;
   height: 10rem;
   font-family: "Tilt Neon", sans-serif;
@@ -57,12 +57,12 @@
     animation-delay: 2.4s;
 }
 .login p::first-letter,
-.home .content p::first-letter {
+.page .content p::first-letter {
   color: var(--c-lyme);
   font-size: clamp(var(--l-md3), calc(var(--size) * 1.2), var(--l-lg1));
 }
 
-.home .content p {
+.page .content p {
   font-family: 'Space Grotesk', sans-serif;
   color: var(--c-label-sm);
   font-size: clamp(var(--l-md2), calc(var(--size) * 1.2), var(--l-md3));
@@ -106,7 +106,7 @@
   background: var(--c-blue-lg);
   
 }
-.home_hero_wrapper {
+.hero_wrapper {
   width: 100%;
   height: fit-content;
   background-image: var(--bg-home-hero);
@@ -124,7 +124,7 @@
   transform: rotate(15deg);
   z-index: 1;
 }
-.home_hero_img {
+.hero_img {
   filter: var(--img-shadow-1);
 }
 

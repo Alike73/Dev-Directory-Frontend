@@ -1,4 +1,4 @@
-import home_illustration from '../../assets/images/books-illustration.svg';
+import home_illustration from '../../assets/images/html-css.svg';
 import ringsPattern from '../../assets/images/rings.svg';
 
 const BannerImage = () => {
