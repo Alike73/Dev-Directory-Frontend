@@ -11,15 +11,17 @@ const HtmlCssAccordion = () => {
     }, [])
 
     return (
-        <div className="container">
-            <div className="accordion" id="accordionExample">
-                { quiz.map((item) => <AccordionItem 
-                    key = { item.id } 
-                    question = { item.question }  
-                    answer = { item.answer }
-                    collapseId = { item.collapseId } 
+        <div className="accord_section">
+            <div className="container">
+                <div className="accordion" id="accordionExample">
+                    { quiz.map((item) => <AccordionItem 
+                        key = { item.id } 
+                        question = { item.question }  
+                        answer = { item.answer }
+                        collapseId = { item.collapseId } 
 
-                /> )}
+                    /> )}
+                </div>
             </div>
         </div>
     )

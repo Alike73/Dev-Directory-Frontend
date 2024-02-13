@@ -1,3 +1,4 @@
+import AccordionImage from "./AccordionImage";
 import EditDeleteQnABtn from "./EditDeleteQnABtn";
 
 
@@ -24,6 +25,7 @@ const AccordionItem = ({ question, answer, collapseId }) => {
             >
                 <div className="accordion-body">
                     <p>{ answer }</p>
+                    <AccordionImage />
                     <EditDeleteQnABtn />
                 </div>
             </div>

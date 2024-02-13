@@ -13,7 +13,7 @@ const ReadBookBtn = () => {
 
         setTimeout(() => {
             dispatch(setIsShowLoader(false))
-        }, 1700)
+        }, 3700)
     };
 
     return (
