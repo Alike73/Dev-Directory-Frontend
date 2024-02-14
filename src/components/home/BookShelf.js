@@ -1,12 +1,14 @@
 import BookFilter from "../../filters/bookShelfFilters/BookFilter";
 import BookSearchInput from "../../filters/bookShelfFilters/BookSearchInput";
 import BookCard from "./BookCard";
+import BookEditor from "./BookEditor";
 
 
 const BookShelf = () => {
 
     return (
         <div className="container pt-3">
+            <BookEditor />
             <div className="d-flex justify-content-center">
                 <BookSearchInput />
             </div>

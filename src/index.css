@@ -10,6 +10,9 @@
 /* ---Accordion--- */
 @import './layouts/ui-accordion.css';
 
+/* ---Editor--- */
+@import './layouts/ui-editor.css';
+
 /* ---Key-Frames--- */
 @import "./keyframes/keyframes.css";
 

@@ -4,16 +4,20 @@ import { useEffect, useState } from "react";
 // import { GiBurningBook } from "react-icons/gi";
 import SidebarLinkItem from "./SidebarLinkItem";
 import dataSidebar from "../../data/DataSidebar";
+import dataSidebarTwo from '../../data/DataSidebarTwo';
 import LanguageToggle from "./LanguageToggle";
+import SidebarOpenEditorItem from "./SidebarOpenEditorItem";
 
 
 const Sidebar = () => {
 
     const isOpen = useSelector(getIsOpen);
     const [sidebarLinks, setSidebarLinks] = useState([]);
+    const [openEditorItems, setOpenEditorItems] = useState([]);
 
     useEffect(() => {
         setSidebarLinks(dataSidebar);
+        setOpenEditorItems(dataSidebarTwo);
     }, []);
 
     return (
@@ -38,9 +42,11 @@ const Sidebar = () => {
                     <strong>user</strong>
                 </a>
                 <ul className="dropdown-menu text-small">
-                    <li><a className="dropdown-item" href="#abc">New project...</a></li>
-                    <li><a className="dropdown-item" href="#abc">Settings</a></li>
-                    <li><a className="dropdown-item" href="#abc">Profile</a></li>
+                    { openEditorItems.map((item) => <SidebarOpenEditorItem 
+                        key = { item.id } 
+                        title = { item.title } 
+                        data_bs_target = { item.data_bs_target } 
+                    />)}
                     <li><hr className="dropdown-divider" /></li>
                     <li><a className="dropdown-item" href="#abc">Sign out</a></li>
                 </ul>
