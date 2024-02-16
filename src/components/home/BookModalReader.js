@@ -5,7 +5,7 @@ import IframeLoader from "./IframeLoader";
 import { getMyIframeLoader } from "../../redux/IframeLoaderSlice";
 
 
-const BookModalReader = ({ pdfUrl, bookTargetId, modalTargetId }) => {
+const BookModalReader = ({ pdfUrl, modalTargetId }) => {
     
     // const my_pdf_file = 'https://cdn.glitch.me/38f6cb42-0588-46b2-8b27-d721c2c36fc4/%D0%93%D1%80%D0%BE%D0%BA%D0%B0%D0%B5%D0%BC%20%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.pdf?v=1707600661249';
     const isShowLoader = useSelector(getMyIframeLoader);

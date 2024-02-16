@@ -15,28 +15,26 @@ const getAllBooks = (setMyBooks) => {
 }
 
 // POST:
-const addBook = (imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, bookTargetId, setBookTargetId, text, setText,  setMyBooks) => {
-    axios.post(`${myURL}/saveBook`, { imgUrl, pdfUrl, category, bookTargetId, text })
+const addBook = (imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, text, setText,  setMyBooks) => {
+    axios.post(`${myURL}/saveBook`, { imgUrl, pdfUrl, category, text })
     .then((data) => {
         console.log(data)
         setImgUrl("")
         setPdfUrl("")
         setCategory("")
-        setBookTargetId("")
         setText("")
         getAllBooks(setMyBooks)
     })
 };
 
 // PUT:
-const editBook = (bookId, imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, bookTargetId, setBookTargetId, text, setText, setMyBooks, setEditingBook) => {
-    axios.post(`${myURL}/editBook`, { _id: bookId, imgUrl, pdfUrl, category, bookTargetId, text })
+const editBook = (bookId, imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, text, setText, setMyBooks, setEditingBook) => {
+    axios.post(`${myURL}/editBook`, { _id: bookId, imgUrl, pdfUrl, category, text })
     .then((data) => {
         console.log(data)
         setImgUrl("")
         setPdfUrl("")
         setCategory("")
-        setBookTargetId("")
         setText("")
         setEditingBook(false)
         getAllBooks(setMyBooks)

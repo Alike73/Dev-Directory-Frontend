@@ -3,15 +3,13 @@ import { useState } from "react";
 
 const BookEditorForm = ({
         handleSubmit, imgUrl, setImgUrl, pdfUrl, setPdfUrl, 
-        category, setCategory, bookTargetId, setBookTargetId, 
-        text, setText, editingBook
+        category, setCategory, text, setText, editingBook
     }) => {
 
     const [isCoverImgFocused, setIsCoverImgFocused] = useState(false);
     const [isPdfFileUrlFocused, setIsPdfFileUrlFocused] = useState(false);
     const [isDescriptionFocused, setIsDescriptionFocused] = useState(false);
     const [isCategoryFocused, setIsCategoryFocused] = useState(false);
-    const [isBookTargetIdFocused, setIsBookTargetIdFocused] = useState(false);
 
     const btnText = editingBook ? "Save Your changes" : "Add New Book";
     return (
@@ -69,24 +67,6 @@ const BookEditorForm = ({
                     onBlur={() => setIsCategoryFocused(false)}
                     value = { category }
                     onChange = { (e) => setCategory(e.target.value) } 
-                />
-            </div>
-            <div className="mb-3">
-                <label 
-                    htmlFor="book-target-id" 
-                    className={ `col-form-label ${ isBookTargetIdFocused ? "active fw-bold" : "" }` }
-                >
-                    Book modal target id:
-                </label>
-                <input 
-                    type="text" 
-                    className="form-control" 
-                    id="book-target-id" 
-                    required 
-                    onFocus={() => setIsBookTargetIdFocused(true)}
-                    onBlur={() => setIsBookTargetIdFocused(false)}
-                    value = { bookTargetId }
-                    onChange = { (e) => setBookTargetId(e.target.value) } 
                 />
             </div>
             <div className="mb-3">

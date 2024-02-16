@@ -3,7 +3,7 @@ import { getMyIframeLoader, setIsShowLoader } from "../../redux/IframeLoaderSlic
 import { GiSecretBook } from "react-icons/gi";
 
 
-const ReadBookBtn = ({ bookTargetId, modalTargetId }) => {
+const ReadBookBtn = ({ modalTargetId }) => {
 
     const isShowLoader = useSelector(getMyIframeLoader);
     const dispatch = useDispatch();

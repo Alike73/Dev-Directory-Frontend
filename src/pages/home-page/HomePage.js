@@ -14,7 +14,6 @@ const HomePage = () => {
     const [imgUrl, setImgUrl] = useState("");
     const [pdfUrl, setPdfUrl] = useState("");
     const [category, setCategory] = useState("");
-    const [bookTargetId, setBookTargetId] = useState("");
     const [text, setText] = useState("");
     const [bookId, setBookId] = useState("");
     const [editingBook, setEditingBook] = useState(false);
@@ -23,12 +22,11 @@ const HomePage = () => {
         getAllBooks(setMyBooks);
     }, []);
 
-    const updatingInInput = (_id, imgUrl, pdfUrl, category, bookTargetId, text) => {
+    const updatingInInput = (_id, imgUrl, pdfUrl, category, text) => {
         setBookId(_id)
         setImgUrl(imgUrl)
         setPdfUrl(pdfUrl)
         setCategory(category)
-        setBookTargetId(bookTargetId)
         setText(text)
         setEditingBook(true);
     }
@@ -44,10 +42,10 @@ const HomePage = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 if(editingBook) {
-                    editBook(bookId, imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, bookTargetId, setBookTargetId, text, setText, setMyBooks, setEditingBook)
+                    editBook(bookId, imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, text, setText, setMyBooks, setEditingBook)
                 }
                 else {
-                    addBook(imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, bookTargetId, setBookTargetId,  text, setText,  setMyBooks)
+                    addBook(imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, text, setText,  setMyBooks)
                 }
                 Swal.fire({
                     icon: "success",
@@ -71,8 +69,6 @@ const HomePage = () => {
                 setPdfUrl = { setPdfUrl }
                 category = { category }
                 setCategory = { setCategory }
-                bookTargetId = { bookTargetId }
-                setBookTargetId = { setBookTargetId }
                 text = { text }
                 setText = { setText }
                 editingBook = { editingBook }
@@ -81,8 +77,7 @@ const HomePage = () => {
             { myBooks.map((item) => <BookModalReader 
                 key = { item._id } 
                 pdfUrl = { item.pdfUrl }
-                modalTargetId = {"book" + item._id }
-                bookTargetId = { item.bookTargetId } 
+                modalTargetId = {"book" + item._id } 
             />)}
 
             <div className="hero_wrapper">

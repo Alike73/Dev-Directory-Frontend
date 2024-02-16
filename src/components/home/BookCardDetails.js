@@ -4,13 +4,13 @@ import BookTextContent from './BookTextContent';
 import ReadBookBtn from "./ReadBookBtn";
 
 
-const BookCardDetails = ({ text, bookTargetId, modalTargetId, updatingInInput }) => {
+const BookCardDetails = ({ text, modalTargetId, updatingInInput }) => {
 
     return (
         <div className="details">
             <BookTextContent text = { text } />
             <div className="tags">
-                <ReadBookBtn bookTargetId = { bookTargetId } modalTargetId = { modalTargetId } />
+                <ReadBookBtn modalTargetId = { modalTargetId } />
             </div>
             <div className="cast">
                 <SecureInput />

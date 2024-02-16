@@ -4,8 +4,7 @@ import BookEditorForm from "./BookEditorForm";
 
 const BookEditor = ({ 
     handleSubmit, imgUrl, setImgUrl, pdfUrl, setPdfUrl, 
-    category, setCategory, bookTargetId, setBookTargetId, 
-    text, setText, editingBook
+    category, setCategory, text, setText, editingBook
     }) => {
 
         const titleText = editingBook ? "Book editing" : "Create new book";
@@ -32,8 +31,6 @@ const BookEditor = ({
                             setText = { setText }
                             category = { category }
                             setCategory = { setCategory }
-                            bookTargetId = { bookTargetId }
-                            setBookTargetId = { setBookTargetId }
                             editingBook = { editingBook }
                         />
                     </div>
