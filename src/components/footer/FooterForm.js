@@ -70,6 +70,7 @@ const FooterForm = () => {
                 <form className="myForm" onSubmit={handleMyFormSubmit}>
                 <div className="form_control_wrapper">
                     <input
+                        id='name'
                         value = { userName }
                         onChange={ (e) => setUserName(e.target.value) }
                         type="text" 
@@ -88,6 +89,7 @@ const FooterForm = () => {
 
                 <div className="form_control_wrapper">
                     <input
+                        id='email'
                         value = { userEmail }
                         onChange={ (e) => setUserEmail(e.target.value) }
                         type="email" 
@@ -106,6 +108,7 @@ const FooterForm = () => {
 
                 <div className="form_control_wrapper">
                     <textarea
+                        id='message'
                         value = { userMessage }
                         onChange={ (e) => setUserMessage(e.target.value)} 
                         className=" mb-4 myFormTextarea" 

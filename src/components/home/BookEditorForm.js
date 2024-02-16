@@ -1,19 +1,26 @@
 import { useState } from "react";
 
 
-const BookEditorForm = () => {
+const BookEditorForm = ({
+        handleSubmit, imgUrl, setImgUrl, pdfUrl, setPdfUrl, 
+        category, setCategory, bookTargetId, setBookTargetId, 
+        text, setText, editingBook
+    }) => {
 
     const [isCoverImgFocused, setIsCoverImgFocused] = useState(false);
     const [isPdfFileUrlFocused, setIsPdfFileUrlFocused] = useState(false);
     const [isDescriptionFocused, setIsDescriptionFocused] = useState(false);
+    const [isCategoryFocused, setIsCategoryFocused] = useState(false);
+    const [isBookTargetIdFocused, setIsBookTargetIdFocused] = useState(false);
 
+    const btnText = editingBook ? "Save Your changes" : "Add New Book";
     return (
-        <form id="book-editor-form">
+        <form id="book-editor-form" onSubmit = { handleSubmit }>
 
             <div className="mb-3">
                 <label 
                     htmlFor="book-cover-img" 
-                    className={ `col-form-label ${ isCoverImgFocused ? "active" : "" }` }
+                    className={ `col-form-label ${ isCoverImgFocused ? "active fw-bold" : "" }` }
                 >
                     Book cover image url:
                 </label>
@@ -23,13 +30,15 @@ const BookEditorForm = () => {
                     id="book-cover-img" 
                     required
                     onFocus={() => setIsCoverImgFocused(true)}
-                    onBlur={() => setIsCoverImgFocused(false)} 
+                    onBlur={() => setIsCoverImgFocused(false)}
+                    value = { imgUrl }
+                    onChange = { (e) => setImgUrl(e.target.value) } 
                 />
             </div>
             <div className="mb-3">
                 <label 
                     htmlFor="book-pdf-file-url" 
-                    className={ `col-form-label ${ isPdfFileUrlFocused ? "active" : "" }` }
+                    className={ `col-form-label ${ isPdfFileUrlFocused ? "active fw-bold" : "" }` }
                 >
                     Book pdf file url:
                 </label>
@@ -39,13 +48,51 @@ const BookEditorForm = () => {
                     id="book-pdf-file-url" 
                     required 
                     onFocus={() => setIsPdfFileUrlFocused(true)}
-                    onBlur={() => setIsPdfFileUrlFocused(false)} 
+                    onBlur={() => setIsPdfFileUrlFocused(false)}
+                    value = { pdfUrl }
+                    onChange = { (e) => setPdfUrl(e.target.value) }  
+                />
+            </div>
+            <div className="mb-3">
+                <label 
+                    htmlFor="book-category" 
+                    className={ `col-form-label ${ isCategoryFocused ? "active fw-bold" : "" }` }
+                >
+                    Book category:
+                </label>
+                <input 
+                    type="text" 
+                    className="form-control" 
+                    id="book-category" 
+                    required 
+                    onFocus={() => setIsCategoryFocused(true)}
+                    onBlur={() => setIsCategoryFocused(false)}
+                    value = { category }
+                    onChange = { (e) => setCategory(e.target.value) } 
+                />
+            </div>
+            <div className="mb-3">
+                <label 
+                    htmlFor="book-target-id" 
+                    className={ `col-form-label ${ isBookTargetIdFocused ? "active fw-bold" : "" }` }
+                >
+                    Book modal target id:
+                </label>
+                <input 
+                    type="text" 
+                    className="form-control" 
+                    id="book-target-id" 
+                    required 
+                    onFocus={() => setIsBookTargetIdFocused(true)}
+                    onBlur={() => setIsBookTargetIdFocused(false)}
+                    value = { bookTargetId }
+                    onChange = { (e) => setBookTargetId(e.target.value) } 
                 />
             </div>
             <div className="mb-3">
                 <label 
                     htmlFor="book-description" 
-                    className={ `col-form-label ${ isDescriptionFocused ? "active" : "" }` }
+                    className={ `col-form-label ${ isDescriptionFocused ? "active fw-bold" : "" }` }
                 >
                     Book description:
                 </label>
@@ -55,7 +102,9 @@ const BookEditorForm = () => {
                     rows="3" 
                     required 
                     onFocus={() => setIsDescriptionFocused(true)}
-                    onBlur={() => setIsDescriptionFocused(false)} 
+                    onBlur={() => setIsDescriptionFocused(false)}
+                    value = { text }
+                    onChange = { (e) => setText(e.target.value) } 
                 />
             </div>
 
@@ -63,7 +112,7 @@ const BookEditorForm = () => {
                 type="submit" 
                 className="btn btn-primary editor_submit_btn"
             >
-                Submit
+                { btnText }
             </button>
 
         </form>

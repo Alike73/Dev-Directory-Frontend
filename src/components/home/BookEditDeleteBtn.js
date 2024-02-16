@@ -3,7 +3,7 @@ import { TfiPencilAlt } from "react-icons/tfi";
 import { BsTrash3 } from "react-icons/bs";
 import my_logo from '../../assets/images/my-Logo-AI.png';
 
-const BookEditDeleteBtn = () => {
+const BookEditDeleteBtn = ({ updatingInInput }) => {
 
     return (
         <div className="edit_delete_wrapper">
@@ -16,6 +16,7 @@ const BookEditDeleteBtn = () => {
                     // ---Open-Close-Modal---> 
                     data-bs-toggle="modal" 
                     data-bs-target="#bookEditorModal"
+                    onClick = { updatingInInput }
                 >
                     <TfiPencilAlt className='fs-3 btn_ico' />
                 </button>

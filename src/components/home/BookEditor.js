@@ -2,7 +2,14 @@ import { CgCloseR } from "react-icons/cg";
 import BookEditorForm from "./BookEditorForm";
 
 
-const BookEditor = () => {
+const BookEditor = ({ 
+    handleSubmit, imgUrl, setImgUrl, pdfUrl, setPdfUrl, 
+    category, setCategory, bookTargetId, setBookTargetId, 
+    text, setText, editingBook
+    }) => {
+
+        const titleText = editingBook ? "Book editing" : "Create new book";
+        
 
     return (
         <div className="modal fade" id="bookEditorModal" tabIndex="-1" aria-labelledby="bookEditorModalLabel" aria-hidden="true">
@@ -10,12 +17,25 @@ const BookEditor = () => {
                 <div className="modal-content">
                     <div className="modal-header editor_header">
                         <h3 className="modal-title fs-5" id="bookEditorModalLabel">
-                            Book name...
+                            { titleText }
                         </h3>
                         <CgCloseR className="fs-3 close_viewer_btn" data-bs-dismiss="modal" aria-label="Close" />
                     </div>
                     <div className="modal-body">
-                        <BookEditorForm />
+                        <BookEditorForm 
+                            handleSubmit = { handleSubmit } 
+                            imgUrl = { imgUrl }
+                            setImgUrl = { setImgUrl }
+                            pdfUrl = { pdfUrl }
+                            setPdfUrl = { setPdfUrl }
+                            text = { text }
+                            setText = { setText }
+                            category = { category }
+                            setCategory = { setCategory }
+                            bookTargetId = { bookTargetId }
+                            setBookTargetId = { setBookTargetId }
+                            editingBook = { editingBook }
+                        />
                     </div>
                 </div>
             </div>

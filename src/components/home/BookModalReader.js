@@ -5,13 +5,13 @@ import IframeLoader from "./IframeLoader";
 import { getMyIframeLoader } from "../../redux/IframeLoaderSlice";
 
 
-const BookModalReader = () => {
+const BookModalReader = ({ pdfUrl, bookTargetId, modalTargetId }) => {
     
-    const my_pdf_file = 'https://cdn.glitch.me/38f6cb42-0588-46b2-8b27-d721c2c36fc4/%D0%93%D1%80%D0%BE%D0%BA%D0%B0%D0%B5%D0%BC%20%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.pdf?v=1707600661249';
+    // const my_pdf_file = 'https://cdn.glitch.me/38f6cb42-0588-46b2-8b27-d721c2c36fc4/%D0%93%D1%80%D0%BE%D0%BA%D0%B0%D0%B5%D0%BC%20%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.pdf?v=1707600661249';
     const isShowLoader = useSelector(getMyIframeLoader);
 
     return (
-        <div className="modal fade" id="bookModal" tabIndex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+        <div className="modal fade" id={ modalTargetId } tabIndex="-1" aria-labelledby={ `${modalTargetId}Label`} aria-hidden="true">
             <div className="modal-dialog modal-fullscreen">
                 <div className="modal-content">
                     <div className="modal-header reader-header">
@@ -24,7 +24,7 @@ const BookModalReader = () => {
                             <iframe
                                 className="my_viewer_iframe" 
                                 title="PDF Books Viewer"
-                                src={ my_pdf_file } 
+                                src={ pdfUrl } 
                                 allow="gyroscope" 
                                 loading='eager'
                             />

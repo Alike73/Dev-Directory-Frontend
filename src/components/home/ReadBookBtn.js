@@ -3,7 +3,7 @@ import { getMyIframeLoader, setIsShowLoader } from "../../redux/IframeLoaderSlic
 import { GiSecretBook } from "react-icons/gi";
 
 
-const ReadBookBtn = () => {
+const ReadBookBtn = ({ bookTargetId, modalTargetId }) => {
 
     const isShowLoader = useSelector(getMyIframeLoader);
     const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const ReadBookBtn = () => {
             className="btn btn-sm me-3 btn-outline-secondary read_btn" 
             onClick = { handleLoader  }
             data-bs-toggle="modal" 
-            data-bs-target="#bookModal"
+            data-bs-target={ `#${modalTargetId}` }
         >
             <span>Read</span>
             <GiSecretBook className='fs-3 btn_ico ms-2' />

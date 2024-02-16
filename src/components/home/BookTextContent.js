@@ -1,13 +1,12 @@
 
 
-const BookTextContent = () => {
+const BookTextContent = ({ text }) => {
 
     return (
         <div>
             <h2 className='mb-3'>Description</h2>
             <p className="desc">
-                Marco, a disillusioned backpacker in his late 20s, 
-                embarks on a solitary journey in search for meaning...
+                { text }
             </p>
         </div>
     )
