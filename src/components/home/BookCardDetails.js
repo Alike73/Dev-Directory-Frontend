@@ -4,7 +4,7 @@ import BookTextContent from './BookTextContent';
 import ReadBookBtn from "./ReadBookBtn";
 
 
-const BookCardDetails = ({ text, modalTargetId, updatingInInput }) => {
+const BookCardDetails = ({ text, modalTargetId, updatingInInput, deleteBook }) => {
 
     return (
         <div className="details">
@@ -14,7 +14,10 @@ const BookCardDetails = ({ text, modalTargetId, updatingInInput }) => {
             </div>
             <div className="cast">
                 <SecureInput />
-                <BookEditDeleteBtn updatingInInput = { updatingInInput } />
+                <BookEditDeleteBtn 
+                    updatingInInput = { updatingInInput } 
+                    deleteBook = { deleteBook } 
+                />
             </div>
         </div>
     )

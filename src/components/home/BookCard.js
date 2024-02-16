@@ -1,7 +1,7 @@
 import BookCardDetails from "./BookCardDetails";
 
 
-const BookCard = ({ imgUrl, text, modalTargetId, updatingInInput }) => {
+const BookCard = ({ imgUrl, text, modalTargetId, updatingInInput, deleteBook }) => {
 
     // https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg
     return (
@@ -13,7 +13,8 @@ const BookCard = ({ imgUrl, text, modalTargetId, updatingInInput }) => {
                 <BookCardDetails 
                     text = { text } 
                     modalTargetId = { modalTargetId } 
-                    updatingInInput = { updatingInInput } 
+                    updatingInInput = { updatingInInput }
+                    deleteBook = { deleteBook} 
                 />
             </div>
         </div>

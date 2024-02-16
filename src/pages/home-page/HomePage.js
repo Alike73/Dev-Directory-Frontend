@@ -87,6 +87,7 @@ const HomePage = () => {
 
             <BookShelf 
                 myBooks = { myBooks }
+                setMyBooks = { setMyBooks }
                 updatingInInput = { updatingInInput }
             />
         </div>

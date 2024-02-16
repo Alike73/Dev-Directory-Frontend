@@ -1,9 +1,10 @@
+import { deleteBook } from "../../api/FetchBooks";
 import BookFilter from "../../filters/bookShelfFilters/BookFilter";
 import BookSearchInput from "../../filters/bookShelfFilters/BookSearchInput";
 import BookCard from "./BookCard";
 
 
-const BookShelf = ({ myBooks, updatingInInput }) => {
+const BookShelf = ({ myBooks, setMyBooks, updatingInInput }) => {
 
 
     return (
@@ -18,7 +19,8 @@ const BookShelf = ({ myBooks, updatingInInput }) => {
                     modalTargetId = {"book" + book._id } 
                     imgUrl = { book.imgUrl } 
                     text = { book.text.substring(0, 184) + "..." }
-                    updatingInInput = {() => updatingInInput(book._id, book.imgUrl, book.pdfUrl, book.category, book.bookTargetId, book.text)} 
+                    updatingInInput = {() => updatingInInput(book._id, book.imgUrl, book.pdfUrl, book.category, book.bookTargetId, book.text)}
+                    deleteBook={() => deleteBook(book._id, setMyBooks)} 
                 />)}
             </div>
         </div>
