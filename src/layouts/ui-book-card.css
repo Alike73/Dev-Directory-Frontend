@@ -232,7 +232,7 @@
 }
 
 /* ===Book-QR-Code=== */
-.book_qr_code_wrapper {
+/* .book_qr_code_wrapper {
     position: absolute;
     top: 30%;
     left: 0;
@@ -249,4 +249,4 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-}
+} */

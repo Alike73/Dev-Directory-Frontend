@@ -1,8 +1,6 @@
-// import BookQRCode from '../book-qr-code/BookQRCode';
 import { TfiPencilAlt } from "react-icons/tfi";
 import { BsTrash3 } from "react-icons/bs";
 import Swal from 'sweetalert2';
-import my_logo from '../../assets/images/my-Logo-AI.png';
 
 const BookEditDeleteBtn = ({ updatingInInput, deleteBook }) => {
 
@@ -32,8 +30,6 @@ const BookEditDeleteBtn = ({ updatingInInput, deleteBook }) => {
 
     return (
         <div className="edit_delete_wrapper">
-                    {/* <BookQRCode /> */}
-            <img className="book_qr_code_wrapper" src={ my_logo } alt="admin-logo" width={30} />
             <div className="d-flex justify-content-end">
                 <button 
                     type="button" 

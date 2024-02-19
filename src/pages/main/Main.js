@@ -17,7 +17,8 @@ import Footer from "../../components/footer/Footer";
 
 
 const Main = () => {
-
+    
+    
     return (
         <div className="main">
             {/* <LoginPage /> */}

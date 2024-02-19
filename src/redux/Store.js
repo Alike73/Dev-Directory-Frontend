@@ -4,6 +4,7 @@ import sidebarItems from './SidebarSlice';
 import headerItems from './NavbarSlice';
 import formItems from './FormSlice';
 import iframeLoaderItems from './IframeLoaderSlice';
+import adminItems from './AdminSlice';
 
 export default configureStore({
     reducer: {
@@ -11,5 +12,6 @@ export default configureStore({
         headerItems,
         formItems,
         iframeLoaderItems,
+        adminItems,
     }
 });

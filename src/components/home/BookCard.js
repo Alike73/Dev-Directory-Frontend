@@ -2,7 +2,7 @@ import BookCardDetails from "./BookCardDetails";
 
 
 const BookCard = ({ imgUrl, text, modalTargetId, updatingInInput, deleteBook }) => {
-
+    
     // https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg
     return (
         <div className="col d-flex justify-content-center align-items-center mb-5 pb-3">
@@ -10,7 +10,7 @@ const BookCard = ({ imgUrl, text, modalTargetId, updatingInInput, deleteBook }) 
                 <div className="poster">
                     <img src={ imgUrl } alt="Book cover illustration" />
                 </div>
-                <BookCardDetails 
+                <BookCardDetails
                     text = { text } 
                     modalTargetId = { modalTargetId } 
                     updatingInInput = { updatingInInput }

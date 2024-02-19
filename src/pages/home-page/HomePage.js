@@ -81,11 +81,17 @@ const HomePage = () => {
             />)}
 
             <div className="hero_wrapper">
-                <BannerContent />
+                <BannerContent 
+                    setEditingBook = { setEditingBook } 
+                    setImgUrl = { setImgUrl } 
+                    setPdfUrl = { setPdfUrl }
+                    setCategory = { setCategory }
+                    setText = { setText }
+                />
                 <img className="divider_bottom" src={ dividerImg } alt="divider-round-bottom" />
             </div>
 
-            <BookShelf 
+            <BookShelf
                 myBooks = { myBooks }
                 setMyBooks = { setMyBooks }
                 updatingInInput = { updatingInInput }

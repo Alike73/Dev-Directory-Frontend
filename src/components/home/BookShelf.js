@@ -6,7 +6,6 @@ import BookCard from "./BookCard";
 
 const BookShelf = ({ myBooks, setMyBooks, updatingInInput }) => {
 
-
     return (
         <div className="container pt-3">
             <div className="d-flex justify-content-center">
@@ -18,8 +17,8 @@ const BookShelf = ({ myBooks, setMyBooks, updatingInInput }) => {
                     key = { book._id }
                     modalTargetId = {"book" + book._id } 
                     imgUrl = { book.imgUrl } 
-                    text = { book.text.substring(0, 184) + "..." }
-                    updatingInInput = {() => updatingInInput(book._id, book.imgUrl, book.pdfUrl, book.category, book.bookTargetId, book.text)}
+                    text = { book.text.substring(0, 164) + "..." }
+                    updatingInInput = {() => updatingInInput(book._id, book.imgUrl, book.pdfUrl, book.category, book.text)}
                     deleteBook={() => deleteBook(book._id, setMyBooks)} 
                 />)}
             </div>

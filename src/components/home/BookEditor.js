@@ -27,10 +27,10 @@ const BookEditor = ({
                             setImgUrl = { setImgUrl }
                             pdfUrl = { pdfUrl }
                             setPdfUrl = { setPdfUrl }
-                            text = { text }
-                            setText = { setText }
                             category = { category }
                             setCategory = { setCategory }
+                            text = { text }
+                            setText = { setText }
                             editingBook = { editingBook }
                         />
                     </div>
