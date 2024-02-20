@@ -16,8 +16,7 @@ import dividerTop from '../../assets/images/divider-round-top.svg';
 import Footer from "../../components/footer/Footer";
 
 
-const Main = () => {
-    
+const Main = ({ myPassword }) => {
     
     return (
         <div className="main">
@@ -39,7 +38,7 @@ const Main = () => {
                             </>
                         }
                         >
-                            <Route index element={<HomePage />} />
+                            <Route index element={<HomePage myPassword = { myPassword } />} />
                             <Route path="html_css" element={<HtmlCssQnA />} />
                             <Route path="javascript" element={<JavaScriptQnA />} />
                             <Route path="react" element={<ReactQnA />} />

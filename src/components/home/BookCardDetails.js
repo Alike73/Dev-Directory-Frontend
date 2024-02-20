@@ -4,19 +4,12 @@ import SecureInput from '../secure-input/SecureInput';
 import BookEditDeleteBtn from './BookEditDeleteBtn';
 import BookTextContent from './BookTextContent';
 import ReadBookBtn from "./ReadBookBtn";
-import { useSelector } from 'react-redux';
-import { getAdmin } from '../../redux/AdminSlice';
 
 
-const BookCardDetails = ({ text, modalTargetId, updatingInInput, deleteBook }) => {
+const BookCardDetails = ({ text, modalTargetId, updatingInInput, deleteBook, myPassword }) => {
 
     const [isPassword, setIsPassword] = useState('');
     const [isShowBtn, setIsShowBtn] = useState(false);
-    const isAdmin = useSelector(getAdmin);
-    const myPassword = "K@ch@pon20111";
-
-    console.log(isAdmin)
-    
 
     const handleSecureFormSubmit = (e) => {
         e.preventDefault();
@@ -30,7 +23,7 @@ const BookCardDetails = ({ text, modalTargetId, updatingInInput, deleteBook }) =
                     icon: "success",
                     iconColor: "#65B741",
                 });
-            }, 1500);
+            }, 500);
         } else if(isPassword === '') {
             setIsShowBtn(false)
             Swal.fire({

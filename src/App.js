@@ -1,22 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Main from './pages/main/Main';
 import { getMeAdmin } from './api/FetchAdmin';
-import { setIsAdmin } from './redux/AdminSlice';
-
 
 
 function App() {
-
-  useEffect(() => {
-    getMeAdmin(setIsAdmin)
-  }, []);
-
   
+  const [isAdmin, setIsAdmin] = useState([]);
+    
+
+    useEffect(() => {
+        getMeAdmin(setIsAdmin)
+    }, []);
+
+    const myPassword = isAdmin.map((item) => item.password).join('');
+
+    console.log(myPassword)
 
   return (
     <div className="App">
-      <Main />
+      <Main myPassword = { myPassword } />
     </div>
   );
 }

@@ -482,7 +482,8 @@ video {
                 inset -3px -3px 5px rgba(0, 0, 0, 0.5);
     transition: var(--transition-1);
 }
-.book_category_btn:hover {
+.book_category_btn:hover,
+.book_category_btn.active {
     color: var(--c-light);
     background-image: var(--filter-btn-bg);
     border: 1px solid #393;

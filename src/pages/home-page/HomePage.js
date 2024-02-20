@@ -8,7 +8,7 @@ import BookShelf from "../../components/home/BookShelf";
 import BookEditor from "../../components/home/BookEditor";
 
 
-const HomePage = () => {
+const HomePage = ({ myPassword }) => {
 
     const [myBooks, setMyBooks] = useState([]);
     const [imgUrl, setImgUrl] = useState("");
@@ -92,6 +92,7 @@ const HomePage = () => {
             </div>
 
             <BookShelf
+                myPassword = { myPassword }
                 myBooks = { myBooks }
                 setMyBooks = { setMyBooks }
                 updatingInInput = { updatingInInput }
