@@ -97,7 +97,6 @@
   background: var(--c-orange);
 }
 
-
 /* ===Page-Style=== */
 .main {
   width: 100%;
@@ -105,6 +104,11 @@
   min-height: 100vh;
   background: var(--c-blue-lg);
   
+}
+.book_shelf {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
 }
 .hero_wrapper {
   width: 100%;
@@ -247,13 +251,14 @@
       font-size: 1rem;
   }
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 420px) {
   .login p {
     height: calc(var(--l-lg3) * 3.8);
   }
   .login_link {
     font-size: 1.3rem;
   }
+  .two h2 {font-size: 2em;}
 }
 
 @media all and (max-width: 320px) {

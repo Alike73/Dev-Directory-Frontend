@@ -3,13 +3,14 @@ import { useState } from "react";
 
 const BookEditorForm = ({
         handleSubmit, imgUrl, setImgUrl, pdfUrl, setPdfUrl, 
-        category, setCategory, text, setText, editingBook
+        category, setCategory, title, setTitle, text, setText, editingBook
     }) => {
 
     const [isCoverImgFocused, setIsCoverImgFocused] = useState(false);
     const [isPdfFileUrlFocused, setIsPdfFileUrlFocused] = useState(false);
     const [isDescriptionFocused, setIsDescriptionFocused] = useState(false);
     const [isCategoryFocused, setIsCategoryFocused] = useState(false);
+    const [isTitleFocused, setIsTitleFocused] = useState(false);
 
     const btnText = editingBook ? "Save Your changes" : "Add New Book";
     return (
@@ -67,6 +68,24 @@ const BookEditorForm = ({
                     onBlur={() => setIsCategoryFocused(false)}
                     value = { category }
                     onChange = { (e) => setCategory(e.target.value) } 
+                />
+            </div>
+            <div className="mb-3">
+                <label 
+                    htmlFor="book-title" 
+                    className={ `col-form-label ${ isTitleFocused ? "active fw-bold" : "" }` }
+                >
+                    Title of the book:
+                </label>
+                <input 
+                    type="text" 
+                    className="form-control" 
+                    id="book-title" 
+                    required 
+                    onFocus={() => setIsTitleFocused(true)}
+                    onBlur={() => setIsTitleFocused(false)}
+                    value = { title }
+                    onChange = { (e) => setTitle(e.target.value) } 
                 />
             </div>
             <div className="mb-3">

@@ -125,8 +125,10 @@
 }
 
 .details h2 {
+    color: var(--c-orange);
     font-weight: 700;
-    font-size: 1.7em;
+    font-size: 1.3em;
+    text-shadow: var(--text-shadow);
 }
 
 /* ===Read-Book-Btn=== */
@@ -231,22 +233,50 @@
     transition: all .4s ease-in-out;
 }
 
-/* ===Book-QR-Code=== */
-/* .book_qr_code_wrapper {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    max-width: 4.6rem;
-    width: 100%;
-    height: auto;
-    background: var(--c-label);
-    padding: .4rem;
-    border-radius: var(--l-sm1);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, 
-                rgba(0, 0, 0, 0.23) 0px 6px 6px;
+/* ===Book-Ribbon=== */
+.ribbon_box {
+    position: relative;
 }
-.qr_code {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-} */
+.ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#05EFF7 0%, #087F8F 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+}
+.ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #087F8F;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #087F8F;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #087F8F;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #087F8F;
+}  

@@ -14,6 +14,7 @@ const HomePage = ({ myPassword }) => {
     const [imgUrl, setImgUrl] = useState("");
     const [pdfUrl, setPdfUrl] = useState("");
     const [category, setCategory] = useState("");
+    const [title, setTitle] = useState("");
     const [text, setText] = useState("");
     const [bookId, setBookId] = useState("");
     const [editingBook, setEditingBook] = useState(false);
@@ -22,11 +23,12 @@ const HomePage = ({ myPassword }) => {
         getAllBooks(setMyBooks);
     }, []);
 
-    const updatingInInput = (_id, imgUrl, pdfUrl, category, text) => {
+    const updatingInInput = (_id, imgUrl, pdfUrl, category, title, text) => {
         setBookId(_id)
         setImgUrl(imgUrl)
         setPdfUrl(pdfUrl)
         setCategory(category)
+        setTitle(title)
         setText(text)
         setEditingBook(true);
     }
@@ -42,10 +44,10 @@ const HomePage = ({ myPassword }) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 if(editingBook) {
-                    editBook(bookId, imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, text, setText, setMyBooks, setEditingBook)
+                    editBook(bookId, imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, title, setTitle, text, setText, setMyBooks, setEditingBook)
                 }
                 else {
-                    addBook(imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, text, setText,  setMyBooks)
+                    addBook(imgUrl, setImgUrl, pdfUrl, setPdfUrl, category, setCategory, title, setTitle, text, setText,  setMyBooks)
                 }
                 Swal.fire({
                     icon: "success",
@@ -69,6 +71,8 @@ const HomePage = ({ myPassword }) => {
                 setPdfUrl = { setPdfUrl }
                 category = { category }
                 setCategory = { setCategory }
+                title = { title }
+                setTitle = { setTitle }
                 text = { text }
                 setText = { setText }
                 editingBook = { editingBook }

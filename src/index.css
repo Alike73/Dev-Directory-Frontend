@@ -56,6 +56,7 @@ body {
   --c-dark: hsl(0, 0%, 5%);
   --c-dark-md: hsl(243, 17%, 22%);
   --c-transparent-dark: hsla(0, 0%, 0%, 0.667);
+  --c-brown: hsl(18, 34%, 51%);
   --c-orange: hsl(22, 89%, 55%);
   --c-coral: hsl(2, 100%, 66%);
   --c-lyme: hsl(118, 56%, 66%);
@@ -65,6 +66,8 @@ body {
   --c-label-md: hsl(216, 2%, 47%);
   --c-label-sm: hsl(211, 25%, 71%);
   --c-light: hsl(0, 0%, 100%);
+
+  --c-bg-warning: hsl(220, 21%, 19%);
 
   --l-sm1: .25rem;
   --l-sm2: .375rem;

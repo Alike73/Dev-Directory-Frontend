@@ -32,6 +32,10 @@ const dataBookFilterCategory = [
     },
     {
         id: 8,
+        category: 'Algorithms'
+    },
+    {
+        id: 9,
         category: 'Other'
     },
 ];

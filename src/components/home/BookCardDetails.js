@@ -6,7 +6,7 @@ import BookTextContent from './BookTextContent';
 import ReadBookBtn from "./ReadBookBtn";
 
 
-const BookCardDetails = ({ text, modalTargetId, updatingInInput, deleteBook, myPassword }) => {
+const BookCardDetails = ({ title, text, modalTargetId, updatingInInput, deleteBook, myPassword }) => {
 
     const [isPassword, setIsPassword] = useState('');
     const [isShowBtn, setIsShowBtn] = useState(false);
@@ -51,7 +51,7 @@ const BookCardDetails = ({ text, modalTargetId, updatingInInput, deleteBook, myP
 
     return (
         <div className="details">
-            <BookTextContent text = { text } />
+            <BookTextContent title = { title } text = { text } />
             <div className="tags">
                 <ReadBookBtn modalTargetId = { modalTargetId } />
             </div>
