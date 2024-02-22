@@ -1,5 +1,6 @@
 import { FaHome } from "react-icons/fa";
-import { PiCodeBold } from "react-icons/pi";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa6";
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiReact } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
@@ -16,36 +17,42 @@ const dataSidebar = [
     },
     {
         id: 2,
-        routeTo: "/html_css",
-        icon: <PiCodeBold className="fs-5" />,
-        title: "HTML&CSS"
+        routeTo: "/html",
+        icon: <FaHtml5 className="fs-5" />,
+        title: "HTML"
     },
     {
         id: 3,
+        routeTo: "/css",
+        icon: <FaCss3Alt className="fs-5" />,
+        title: "CSS"
+    },
+    {
+        id: 4,
         routeTo: "/javascript",
         icon: <RiJavascriptFill className="fs-5" />,
         title: "JavaScript"
     },
     {
-        id: 4,
+        id: 5,
         routeTo: "/react",
         icon: <SiReact className="fs-5" />,
         title: "React.js"
     },
     {
-        id: 5,
+        id: 6,
         routeTo: "/nodejs",
         icon: <FaNodeJs className="fs-5" />,
         title: "NodeJS"
     },
     {
-        id: 6,
+        id: 7,
         routeTo: "/mongodb",
         icon: <SiMongodb className="fs-5" />,
         title: "MongoDB"
     },
     {
-        id: 7,
+        id: 8,
         routeTo: "/github",
         icon: <FaGithub className="fs-5" />,
         title: "GitHub"

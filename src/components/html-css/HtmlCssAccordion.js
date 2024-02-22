@@ -17,7 +17,8 @@ const HtmlCssAccordion = () => {
                     { quiz.map((item) => <AccordionItem 
                         key = { item.id } 
                         question = { item.question }  
-                        answer = { item.answer }
+                        answer = { item.answerMarkdown }
+                        image = { item.image }
                         collapseId = { item.collapseId } 
 
                     /> )}

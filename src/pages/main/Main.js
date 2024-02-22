@@ -5,7 +5,8 @@ import Header from "../../components/header/Header";
 import Sidebar from "../../components/sidebar/Sidebar";
 import SidebarToggler from "../../components/sidebar-toggler/SidebarToggler";
 import HomePage from "../home-page/HomePage";
-import HtmlCssQnA from "../html-css-page/HtmlCssQnA";
+import HtmlQnA from "../html-css-page/HtmlQnA";
+import CssQnA from "../css-page/CssQnA";
 import JavaScriptQnA from "../js-page/JavaScriptQnA";
 import ReactQnA from "../react-page/ReactQnA";
 import NodeJsQnA from "../nodejs-page/NodeJsQnA";
@@ -39,7 +40,8 @@ const Main = ({ myPassword }) => {
                         }
                         >
                             <Route index element={<HomePage myPassword = { myPassword } />} />
-                            <Route path="html_css" element={<HtmlCssQnA />} />
+                            <Route path="html" element={<HtmlQnA />} />
+                            <Route path="css" element={<CssQnA />} />
                             <Route path="javascript" element={<JavaScriptQnA />} />
                             <Route path="react" element={<ReactQnA />} />
                             <Route path="nodejs" element={<NodeJsQnA />} />

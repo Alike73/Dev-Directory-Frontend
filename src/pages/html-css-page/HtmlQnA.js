@@ -2,7 +2,7 @@ import BannerContent from "../../components/html-css/BannerContent";
 import dividerImg from "../../assets/images/divider-round-bottom.svg";
 import HtmlCssAccordion from "../../components/html-css/HtmlCssAccordion";
 
-const HtmlCssQnA = () => {
+const HtmlQnA = () => {
 
     return (
         <div className="page">
@@ -15,4 +15,4 @@ const HtmlCssQnA = () => {
     )
 };
 
-export default HtmlCssQnA;
+export default HtmlQnA;

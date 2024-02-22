@@ -1,8 +1,10 @@
+import ReactMarkdown from 'react-markdown'
 import AccordionImage from "./AccordionImage";
 import EditDeleteQnABtn from "./EditDeleteQnABtn";
 
 
-const AccordionItem = ({ question, answer, collapseId }) => {
+const AccordionItem = ({ question, answer, image, collapseId }) => {
+    
 
     return (
         <div className="accordion-item">
@@ -24,8 +26,12 @@ const AccordionItem = ({ question, answer, collapseId }) => {
                 data-bs-parent="#accordionExample"
             >
                 <div className="accordion-body">
-                    <p>{ answer }</p>
-                    <AccordionImage />
+                <ReactMarkdown children={answer} className="QnA lead w-100" />
+                {/* <ReactMarkdown>
+                { answer }
+                </ReactMarkdown> */}
+                    {/* <p>{ answer }</p> */}
+                    <AccordionImage image = { image } />
                     <EditDeleteQnABtn />
                 </div>
             </div>
