@@ -15,7 +15,7 @@ const BookFiltered = ({ category }) => {
 
     return (
         <button 
-            className={ `btn btn-sm rounded-pill px-3 book_category_btn ${ 
+            className={ `btn btn-sm rounded-pill px-3 category_btn ${ 
                 selectedBookCategory === category 
                     ? "active" 
                     : "" 

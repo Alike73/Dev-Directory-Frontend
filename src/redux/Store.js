@@ -6,6 +6,7 @@ import formItems from './FormSlice';
 import iframeLoaderItems from './IframeLoaderSlice';
 import searchBookItems from './SearchBookSlice';
 import bookItems from './BookSlice';
+import cssFilterItems from './CssFilterSlice';
 
 export default configureStore({
     reducer: {
@@ -15,5 +16,6 @@ export default configureStore({
         iframeLoaderItems,
         searchBookItems,
         bookItems,
+        cssFilterItems,
     }
 });

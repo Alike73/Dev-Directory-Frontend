@@ -4,7 +4,7 @@ const BannerTitle = () => {
 
     return (
         <h2 className="fw-bold mb-3">
-            CSS - Q & A 
+            CSS Interview questions and answers
         </h2>
     )
 };

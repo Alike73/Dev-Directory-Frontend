@@ -1,6 +1,9 @@
 .markdown_wrapper {
     overflow-x: inherit;
 }
+.markdown_wrapper h1 {
+    color: var(--c-lyme);
+}
 .markdown_wrapper h2, h3 {
     color: var(--c-light);
     font-size: clamp(var(--l-md2), calc(var(--size) * 1.2), var(--l-md3));
