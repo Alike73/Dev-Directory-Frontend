@@ -5,7 +5,7 @@ import Header from "../../components/header/Header";
 import Sidebar from "../../components/sidebar/Sidebar";
 import SidebarToggler from "../../components/sidebar-toggler/SidebarToggler";
 import HomePage from "../home-page/HomePage";
-import HtmlQnA from "../html-css-page/HtmlQnA";
+import HtmlQnA from "../html-page/HtmlQnA";
 import CssQnA from "../css-page/CssQnA";
 import JavaScriptQnA from "../js-page/JavaScriptQnA";
 import ReactQnA from "../react-page/ReactQnA";

@@ -1,0 +1,10 @@
+.markdown_wrapper {
+    overflow-x: inherit;
+}
+.markdown_wrapper h2, h3 {
+    color: var(--c-light);
+}
+
+.markdown_wrapper p {
+    color: var(--c-label-lg);
+}

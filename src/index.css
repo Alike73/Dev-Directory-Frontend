@@ -2,7 +2,10 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 /* ---Components-Style--- */
-@import "./layouts/ui-styles.css";
+@import './layouts/ui-styles.css';
+
+/* ---Question-Answers-List--- */
+@import './layouts/ui-qa-list.css';
 
 /* ---Book-Card--- */
 @import './layouts/ui-book-card.css';
@@ -14,7 +17,7 @@
 @import './layouts/ui-editor.css';
 
 /* ---Key-Frames--- */
-@import "./keyframes/keyframes.css";
+@import './keyframes/keyframes.css';
 
 
 /* font-family: 'Manrope', sans-serif;
