@@ -3,8 +3,30 @@
 }
 .markdown_wrapper h2, h3 {
     color: var(--c-light);
+    font-size: clamp(var(--l-md2), calc(var(--size) * 1.2), var(--l-md3));
+}
+.markdown_wrapper h6 {
+    color: var(--c-blue-sm);
 }
 
 .markdown_wrapper p {
     color: var(--c-label-lg);
+    font-size: clamp(var(--l-md1), calc(var(--size) * 1.2), var(--l-md2));
+}
+.markdown_wrapper ol li, ul li {
+    color: var(--c-blue-sm);
+}
+.markdown_wrapper pre code {
+    color: var(--c-salad);
+}
+.markdown_wrapper table {
+    color: var(--c-label);
+}
+.markdown_wrapper hr {
+    height: 10px;
+    border-bottom: 2px solid var(--c-label-lg);
+}
+
+::marker {
+    color: var(--c-coral);
 }

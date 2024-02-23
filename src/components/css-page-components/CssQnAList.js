@@ -15,7 +15,7 @@ const CssQnAList = () => {
     }, [])
 
     return (
-        <div className="col-md-7 col-lg-8 mx-auto p-3 markdown_wrapper">
+        <div className="col-md-8 col-lg-10 mx-auto p-3 markdown_wrapper">
             <Markdown>
                 { text }
             </Markdown>
