@@ -8,6 +8,9 @@
     color: var(--c-light);
     font-size: clamp(var(--l-md2), calc(var(--size) * 1.2), var(--l-md3));
 }
+.markdown_wrapper h4 {
+    color: var(--c-label-lg);
+}
 .markdown_wrapper h6 {
     color: var(--c-blue-sm);
 }
@@ -21,9 +24,14 @@
 }
 .markdown_wrapper pre code {
     color: var(--c-salad);
+    /* font-size: 12px; */
 }
 .markdown_wrapper table {
     color: var(--c-label);
+}
+.markdown_wrapper img {
+    display: block;
+    width: 100%;
 }
 .markdown_wrapper hr {
     height: 10px;
