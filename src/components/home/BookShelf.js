@@ -45,16 +45,6 @@ const BookShelf = ({ myBooks, setMyBooks, updatingInInput, myPassword }) => {
                             updatingInInput = {() => updatingInInput(book._id, book.imgUrl, book.pdfUrl, book.category, book.title, book.text)}
                             deleteBook={() => deleteBook(book._id, setMyBooks)} 
                         />))}
-                {/* { filteredBooks.map((book) => <BookCard
-                    myPassword = { myPassword } 
-                    key = { book._id }
-                    modalTargetId = {"book" + book._id } 
-                    imgUrl = { book.imgUrl }
-                    title = { book.title }
-                    text = { book.text.substring(0, 164) + "..." }
-                    updatingInInput = {() => updatingInInput(book._id, book.imgUrl, book.pdfUrl, book.category, book.title, book.text)}
-                    deleteBook={() => deleteBook(book._id, setMyBooks)} 
-                />)} */}
             </div>
         </div>
     )

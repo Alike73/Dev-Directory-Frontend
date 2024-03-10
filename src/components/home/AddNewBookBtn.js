@@ -3,7 +3,6 @@ import { GiSecretBook } from "react-icons/gi";
 const AddNewBookBtn = ({ setEditingBook, setImgUrl, setPdfUrl, setCategory, setText }) => {
 
     const handleCreateNote = () => {
-
         setEditingBook(false)
         setImgUrl("")
         setPdfUrl("")
